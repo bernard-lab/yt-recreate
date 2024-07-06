@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Layout</title>
+    <style>
+      .div-I {
+        display: flex;
+        flex-direction: row; /* Default Layout */
+        margin-bottom: 20px;
+      }
+      .div1,
+      .div3 {
+        background-color: coral;
+      }
+      .div2 {
+        background-color: skyblue;
+      }
+      /* -------------- */
+      .div-II {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        .div1 {
+          width: 100px;
+          height: 100px;
+        }
+        .div2 {
+          flex: 1; /* equivalent to grid 1fr*/
+        }
+        .div3 {
+          flex: 2; /* equivalent to grid 2fr*/
+        }
+      }
+      /* --------------------------------- */
+      .div-III {
+        display: flex;
+        height: 70px;
+        border: 1px solid black;
+        justify-content: space-between;
+        align-items: end;
+
+        .div1,
+        .div2,
+        .div3 {
+          width: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div-I">
+      <div class="div1">div 1</div>
+      <div class="div2">
+        div 2
+        <p>Div 2 paragraph</p>
+      </div>
+    </div>
+
+    <div class="div-II">
+      <div class="div1">100 sqpx</div>
+      <div class="div2">
+        div 2
+        <p>Div 2 paragraph</p>
+      </div>
+      <div class="div3">Div 3 flex 2</div>
+    </div>
+
+    <div class="div-III">
+      <div class="div1">div 1 100px</div>
+      <div class="div2">div 2 100px</div>
+      <div class="div3">Div 3 100px</div>
+    </div>
+  </body>
+</html>

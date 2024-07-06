@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Layout</title>
+
+    <style>
+      body {
+        height: 3000px;
+        padding-top: 60px; /*best practice to accommodate
+        top space for the header*/
+        padding-left: 80px;
+      }
+      .header {
+        background-color: black;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px; /* set height */
+      }
+      .sidebar {
+        background-color: bisque;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        bottom: 0;
+        width: 70px;
+      }
+      .new-bar {
+        position: absolute;
+        left: 20px;
+        background-color: green;
+        color: white;
+        /* move element to the back of elements with default
+         z-index of 0. */
+        z-index: 1;
+      }
+      .div1 {
+        background-color: aqua;
+        width: 200px;
+        height: 200px;
+      }
+      .div2 {
+        background-color: coral;
+        width: 200px;
+        height: 200px;
+        position: relative;
+      }
+      .time {
+        background-color: black;
+        color: white;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+      }
+      .close-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="practice1">
+      <div class="header">header</div>
+      <div class="sidebar">
+        sidebar
+        <div class="close-btn">X</div>
+      </div>
+      <div class="new-bar">absolute</div>
+      <div class="div1">div1</div>
+      <div class="div2">
+        div2
+        <div class="time">5:53</div>
+      </div>
+    </div>
+  </body>
+</html>
